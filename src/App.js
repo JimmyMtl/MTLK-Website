@@ -9,14 +9,6 @@ function App() {
         <p>
           Le site web de MTLK se refait une beauté... Nous revenons bientôt !
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
