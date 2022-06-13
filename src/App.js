@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Le site web de MTLK se refait une beauté... Nous revenons bientôt !
         </p>
         <a
           className="App-link"
