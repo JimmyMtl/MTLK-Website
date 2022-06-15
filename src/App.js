@@ -9,7 +9,6 @@ function App() {
         <p>
           Le site web MTLK se refait une beauté.. Nous revenons bientôt ! :)
         </p>
-        <p>Bisous Chloé</p>
       </header>
     </div>
   );
