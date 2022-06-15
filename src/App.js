@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Le site web de MTLK se refait une beauté.. Nous revenons bientôt ! :)
+          Le site web MTLK se refait une beauté.. Nous revenons bientôt ! :)
         </p>
       </header>
     </div>
