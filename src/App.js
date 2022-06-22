@@ -1,17 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./common/Components/Navbar/Navbar";
+import Footer from "./common/Components/Footer/Footer";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Home from "./common/Pages/Home/Home";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Le site web MTLK se refait une beauté.. Nous revenons bientôt !  :)
-        </p>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <Navbar/>
+            <Routes>
+                <Route path={'/'} element={<Home/>}/>
+            </Routes>
+            <Footer/>
+        </Router>
+    );
 }
 
 export default App;
