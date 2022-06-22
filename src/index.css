@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 body {
+    @apply m-0 p-0;
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -14,6 +15,11 @@ body {
     background: linear-gradient(#001430, #03164A, #001430, #011530);
 }
 
+html {
+    scroll-behavior: smooth;
+
+}
+
 h1 {
     color: white;
     @apply text-5xl font-bold;
@@ -22,10 +28,17 @@ h1 {
 h2 {
     color: white;
     @apply text-3xl font-bold;
+    @apply text-center;
+}
+
+.containerServices h2 {
+    @apply flex items-center gap-5;
+
 }
 
 h3 {
     @apply text-xl text-gray-400 font-semibold;
+    @apply text-center;
 }
 
 h4 {
@@ -74,6 +87,7 @@ a {
 .containerPage {
     @apply mt-16;
     @apply w-full md:w-10/12 lg:w-8/12;
+    @apply p-10 md:p-0;
     @apply mx-auto;
 }
 
@@ -88,7 +102,7 @@ a {
 }
 
 .containerFirst .containerImage {
-    @apply w-full md:w-6/12;
+    @apply w-full md:w-6/12 md:p-16;
 }
 
 .containerFirst .btnHeader {
@@ -97,13 +111,13 @@ a {
 }
 
 .containerServices {
-    @apply flex flex-col-reverse md:flex-row  flex-wrap;
+    @apply flex flex-col-reverse md:flex-row gap-y-16 flex-wrap;
     @apply items-center justify-center;
 }
 
 .containerServices .containerImage {
     @apply w-full md:w-6/12;
-    @apply md:pr-16;
+    @apply sm:px-28 md:px-12 lg:px-20;
 }
 
 .containerServices .containerText {
@@ -132,21 +146,157 @@ a {
     @apply flex flex-col items-center justify-center;
 }
 
+
 .containerCards {
-    @apply flex flex-wrap gap-8 items-center justify-center;
+    @apply flex flex-wrap md:gap-8 gap-y-16 items-center justify-center;
+    @apply my-10;
+}
+
+.containerCards svg {
+    @apply block;
 }
 
 .containerCards .card {
     @apply p-5;
-    @apply shadow;
-    @apply rounded-xl;
-    transform: skew(0deg, -6deg);
+    @apply w-full md:w-4/12 lg:w-3/12;
     @apply relative;
     /*@apply bg-green-400;*/
-    @apply bg-gradient-to-b bg-indigo-900 to-fuchsia-900;
 }
 
-.card .contentCard {
-    @apply absolute top-0 left-0;
-    transform: skew(0deg, 6deg)
+.containerCards .containerImage {
+    @apply w-32;
+
 }
+
+.containerCards img {
+    width: auto;
+    height: auto;
+}
+
+.containerCards .card:before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 bottom-0;
+    @apply shadow;
+    @apply rounded-xl;
+    transform: skew(0, -5deg);
+    @apply bg-gradient-to-b from-[#1F2571] to-[#1B2144];
+    z-index: -1;
+}
+
+.containerCards .card:after {
+    content: '';
+    @apply absolute top-0 left-0 right-0 bottom-0;
+    @apply shadow;
+    @apply rounded-xl;
+    transform: skew(0, 5deg);
+    @apply bg-gradient-to-b from-[#1E314B] to-[#1B2144];
+    z-index: -2;
+}
+
+.containerCards .contentCard {
+    @apply flex flex-col gap-5;
+
+}
+
+.containerCards .btn {
+    @apply block text-center mt-5;
+}
+
+.containerContact {
+    @apply my-5;
+    @apply flex flex-col gap-5;
+    @apply w-full;
+    @apply bg-[#152740];
+    @apply rounded shadow;
+    @apply p-5;
+
+}
+
+.containerContact h2, .containerContact h3 {
+    @apply text-center block;
+}
+
+.containerForm {
+    @apply flex flex-col gap-5;
+    @apply w-full md:w-8/12 lg:w-5/12 mx-auto;
+}
+
+.containerForm .containerLabelInput {
+    @apply space-y-2;
+}
+
+.containerForm label, .containerForm textarea, .containerForm input {
+    @apply w-full;
+}
+
+.containerForm label {
+    @apply font-bold;
+    @apply text-white;
+}
+
+.containerForm input, .containerForm textarea {
+    @apply py-2 px-4;
+    @apply rounded;
+    @apply bg-[#2E415C];
+    @apply text-gray-100;
+    @apply ring-0;
+}
+
+.containerForm button {
+    @apply text-white font-semibold block;
+}
+
+
+.containerFooter {
+    @apply flex flex-wrap items-center justify-center gap-5;
+    @apply bg-[#12243E];
+    @apply p-10 md:py-8 md:px-0;
+}
+
+.containerLogos {
+    @apply space-x-4;
+    @apply text-4xl;
+}
+
+
+.containerFooter .containerFirstCol,
+.containerFooter .containerSecondCol,
+.containerFooter .containerThirdCol {
+    @apply flex flex-col gap-5;
+    @apply w-full md:w-auto;
+}
+
+.containerFooter .containerFirstCol {
+    @apply md:w-4/12;
+}
+.copyrightFirst {
+    @apply hidden md:block;
+}
+.copyrightSecond {
+    @apply block md:hidden;
+}
+.containerFirstCol img {
+    @apply w-[250px];
+}
+
+.containerLinks {
+    @apply flex flex-col gap-4;
+}
+
+.containerLinks .linkBtn {
+    @apply p-0;
+}
+
+.containerThirdCol h5 {
+    @apply inline-flex items-center justify-center gap-2;
+}
+
+.containerThirdCol svg {
+    @apply text-xl;
+    @apply text-red-600;
+}
+
+.containerThirdCol a {
+    @apply text-gray-400;
+}
+

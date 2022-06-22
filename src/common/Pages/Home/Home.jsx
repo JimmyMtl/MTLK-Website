@@ -4,7 +4,7 @@ import {faCode, faLaptop, faTreeCity} from "@fortawesome/free-solid-svg-icons";
 const Home = () => {
     return (
         <div className={"containerPage"}>
-            <div className={"containerFirst"}>
+            <div className={"containerFirst"} id={"Accueil"}>
                 <div className="containerText">
                     <div>
                         <h1>Site Vitrine</h1>
@@ -22,8 +22,8 @@ const Home = () => {
                 <div className="containerImage"><img src="/assets/images/accueil.png" alt="Assistance IT"/></div>
 
             </div>
-            <div className="containerServices">
-                <h2>Nos prestations</h2>
+            <h2 className={"my-10 text-center"}>Nos prestations</h2>
+            <div className="containerServices" id={"Services"}>
                 <div className="containerImage"><img src="/assets/images/services.png" alt="Assistance IT"/></div>
                 <div className={"containerText"}>
                     <h2><FontAwesomeIcon icon={faTreeCity}/>Assistance PC & MAC</h2>
@@ -38,16 +38,72 @@ const Home = () => {
                         simple site vitrine au développement d’API ou d’application web & native.</p>
                 </div>
             </div>
-            <div className="containerRealisations">
+            <div className={"my-10 space-y-2"}>
                 <h2>Nos réalisations</h2>
                 <h3>Création de Site Vitrine & Application Web</h3>
+            </div>
+            <div className="containerRealisations" id={"Realisations"}>
                 <div className={"containerCards"}>
                     <div className="card">
                         <div className="contentCard">
+                            <div className="containerImage">
+                                <img src="/assets/images/logos/hameau-de-la-savouillane.png"
+                                     alt="Hameau de la Savouillane"/>
+                            </div>
                             <h4>Le Hameau de la Savouillane</h4>
+                            <p>Site web vitrine présentant les différentes activités du Hameau de la Savouillane situé à
+                                Buis-les-Baronnies.</p>
+                            <a href="https://hameau-de-la-savouillane.com" target="_blank" className="btn">Visiter</a>
+                        </div>
+                    </div>
+                    <div className="card">
+                        <div className="contentCard">
+                            <div className="containerImage">
+                                <img src="/assets/images/logos/club.png" height={10} alt="Club AtouTalent"/>
+                            </div>
+                            <h4>Club AtouTalent</h4>
+                            <p>Site web vitrine présentant les différentes activités du Hameau de la Savouillane situé à
+                                Buis-les-Baronnies.</p>
+                            <a href="https://hameau-de-la-savouillane.com" target="_blank" className="btn">Visiter</a>
+                        </div>
+                    </div>
+                    <div className="card">
+                        <div className="contentCard">
+                            <div className="containerImage">
+                                <img src="/assets/images/logos/mtlk.png" alt="MTLK"/>
+                            </div>
+                            <h4>MTLK IT</h4>
+                            <p>Site web vitrine présentant les différentes activités du Hameau de la Savouillane situé à
+                                Buis-les-Baronnies.</p>
+                            <a href="https://hameau-de-la-savouillane.com" target="_blank" className="btn">Visiter</a>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="containerContact" id={"Contact"}>
+                <h2>Nous contacter</h2>
+                <h3>Une question ? Besoin d&apos;un devis ? Contactez-nous !</h3>
+                <form className="containerForm">
+                    <div className={"containerLabelInput"}>
+                        <label htmlFor="mail">Adresse Mail</label>
+                        <input type="mail" name="mail" id="mail" placeholder={"Votre adresse mail..."} required/>
+                    </div>
+                    <div className={"containerLabelInput"}>
+                        <label htmlFor="tel">Numéro de Téléphone</label>
+                        <input type="number" name="tel" id="tel" placeholder={"Votre numéro de téléphone..."} required/>
+                    </div>
+                    <div className={"containerLabelInput"}>
+                        <label htmlFor="object">Objet</label>
+                        <input type="text" name="object" id="object" placeholder={"L'objet de votre demande..."}
+                               required/>
+                    </div>
+                    <div className={"containerLabelInput"}>
+                        <label htmlFor="description">Description</label>
+                        <textarea name="description" id="description"
+                                  placeholder={"Decrivez-nous en quelques lignes votre besoin..."} required/>
+                    </div>
+                    <button className={"btn"} type={"submit"}>Envoyer</button>
+                </form>
             </div>
         </div>
     );
