@@ -62,9 +62,8 @@ const Home = () => {
                                 <img src="/assets/images/logos/club.png" height={10} alt="Club AtouTalent"/>
                             </div>
                             <h4>Club AtouTalent</h4>
-                            <p>Site web vitrine présentant les différentes activités du Hameau de la Savouillane situé à
-                                Buis-les-Baronnies.</p>
-                            <a href="https://hameau-de-la-savouillane.com" target="_blank" className="btn">Visiter</a>
+                            <p>Application web facilitant la relation entreprises-étudiants. Création d’un moteur de recherche sur les formations en Grand Est.</p>
+                            <a href="https://clubatoutalent.fr" target="_blank" className="btn">Visiter</a>
                         </div>
                     </div>
                     <div className="card">
@@ -73,9 +72,8 @@ const Home = () => {
                                 <img src="/assets/images/logos/mtlk.png" alt="MTLK"/>
                             </div>
                             <h4>MTLK IT</h4>
-                            <p>Site web vitrine présentant les différentes activités du Hameau de la Savouillane situé à
-                                Buis-les-Baronnies.</p>
-                            <a href="https://hameau-de-la-savouillane.com" target="_blank" className="btn">Visiter</a>
+                            <p>Site web vitrine présentant les différentes activités de l’entreprise MTLK Informatique.</p>
+                            <a href="https://mtlk.fr" target="_blank" className="btn">Visiter</a>
                         </div>
                     </div>
                 </div>
@@ -83,7 +81,7 @@ const Home = () => {
             <div className="containerContact" id={"Contact"}>
                 <h2>Nous contacter</h2>
                 <h3>Une question ? Besoin d&apos;un devis ? Contactez-nous !</h3>
-                <form className="containerForm">
+                <form className="containerForm" action="https://formsubmit.co/30b76927fbbcd60b3835eec238923d8f" method="POST">
                     <div className={"containerLabelInput"}>
                         <label htmlFor="mail">Adresse Mail</label>
                         <input type="mail" name="mail" id="mail" placeholder={"Votre adresse mail..."} required/>

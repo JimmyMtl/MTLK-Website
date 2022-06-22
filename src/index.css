@@ -117,7 +117,7 @@ a {
 
 .containerServices .containerImage {
     @apply w-full md:w-6/12;
-    @apply sm:px-28 md:px-12 lg:px-20;
+    @apply sm:px-28 md:px-12 lg:pr-20;
 }
 
 .containerServices .containerText {
