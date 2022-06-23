@@ -56,10 +56,24 @@ a {
 }
 
 .containerNavbar {
-    @apply flex flex-wrap items-center;
+    /*@apply flex flex-wrap items-center;*/
+    /*@apply text-white;*/
+    /*@apply py-4 px-4;*/
+    /*@apply bg-red-100 md:bg-transparent;*/
+}
+
+.containerLarge {
+
+    @apply hidden md:flex flex-wrap items-center;
     @apply text-white;
     @apply py-4 px-4;
     @apply bg-red-100 md:bg-transparent;
+}
+
+.containerMobile {
+    /*flex flex-col*/
+    @apply md:hidden;
+    @apply px-4 py-2;
 }
 
 .containerLogo {
@@ -85,7 +99,7 @@ a {
 }
 
 .containerPage {
-    @apply mt-16;
+    @apply mt-5 md:mt-16;
     @apply w-full md:w-10/12 lg:w-8/12;
     @apply p-10 md:p-0;
     @apply mx-auto;
@@ -269,12 +283,15 @@ a {
 .containerFooter .containerFirstCol {
     @apply md:w-4/12;
 }
+
 .copyrightFirst {
     @apply hidden md:block;
 }
+
 .copyrightSecond {
     @apply block md:hidden;
 }
+
 .containerFirstCol img {
     @apply w-[250px];
 }
@@ -300,3 +317,95 @@ a {
     @apply text-gray-400;
 }
 
+.containerMobile {
+    @apply flex flex-wrap items-center ;
+    @apply md:hidden;
+}
+
+.containerMobile .containerMenu{
+    @apply absolute top-12 left-0 right-0;
+    @apply overflow-hidden;
+    @apply flex flex-col items-center justify-center;
+    @apply transition-all duration-500;
+    @apply bg-gradient-to-b from-[#001430] to-[#011530]  p-5;
+}
+.containerMobile .containerHiddenMenu {
+    @apply h-0;
+    @apply opacity-0;
+}
+
+.containerMobile .containerActiveMenu {
+    @apply h-60;
+    @apply opacity-100;
+}
+
+
+/* #region HAMBURGER ANIMATION */
+.containerBtnMobile {
+    @apply ml-auto;
+}
+
+.btnMobile {
+    @apply block;
+}
+
+.btnMobile label {
+    display: flex;
+    flex-direction: column;
+    width: 35px;
+    cursor: pointer;
+}
+
+.btnMobile label span {
+    background: #fff;
+    border-radius: 10px;
+    height: 4px;
+    margin: 3px 0;
+    transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+}
+
+
+.btnMobile span:nth-of-type(1) {
+    width: 50%;
+
+}
+
+.btnMobile span:nth-of-type(2) {
+    width: 100%;
+}
+
+
+.btnMobile span:nth-of-type(3) {
+    width: 75%;
+
+}
+
+
+.btnMobile input[type="checkbox"] {
+    display: none;
+}
+
+
+.btnMobile input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+    transform-origin: bottom;
+    transform: rotatez(45deg) translate(2px, 0px)
+}
+
+
+.btnMobile input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+
+    transform-origin: top;
+    transform: rotatez(-45deg)
+}
+
+
+.btnMobile input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+
+    transform-origin: bottom;
+    width: 50%;
+    transform: translate(14px, -6px) rotatez(45deg);
+
+}
+
+/* #endregion HAMBURGER ANIMATION */

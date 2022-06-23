@@ -1,7 +1,22 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCode, faLaptop, faTreeCity} from "@fortawesome/free-solid-svg-icons";
+import axios from "axios"
+import {useState} from "react";
 
 const Home = () => {
+    const [states, setStates] = useState({mail: "", tel: "", object: "", description: ""})
+    const {mail, tel, object, description} = states;
+    const handleSubmit = async (e) => {
+        // action="https://formsubmit.co/30b76927fbbcd60b3835eec238923d8f" method="POST"
+        e.preventDefault();
+        console.log('submit')
+    }
+    const handleChange = (e) => {
+        setStates({
+            ...states,
+            [e.target.id]: e.target.value
+        })
+    }
     return (
         <div className={"containerPage"}>
             <div className={"containerFirst"} id={"Accueil"}>
@@ -53,7 +68,8 @@ const Home = () => {
                             <h4>Le Hameau de la Savouillane</h4>
                             <p>Site web vitrine présentant les différentes activités du Hameau de la Savouillane situé à
                                 Buis-les-Baronnies.</p>
-                            <a href="https://hameau-de-la-savouillane.com" target="_blank" className="btn">Visiter</a>
+                            <a href="https://hameau-de-la-savouillane.com" target="_blank" className="btn"
+                               rel="noreferrer">Visiter</a>
                         </div>
                     </div>
                     <div className="card">
@@ -62,8 +78,10 @@ const Home = () => {
                                 <img src="/assets/images/logos/club.png" height={10} alt="Club AtouTalent"/>
                             </div>
                             <h4>Club AtouTalent</h4>
-                            <p>Application web facilitant la relation entreprises-étudiants. Création d’un moteur de recherche sur les formations en Grand Est.</p>
-                            <a href="https://clubatoutalent.fr" target="_blank" className="btn">Visiter</a>
+                            <p>Application web facilitant la relation entreprises-étudiants. Création d’un moteur de
+                                recherche sur les formations en Grand Est.</p>
+                            <a href="https://clubatoutalent.fr" rel="noreferrer" target="_blank"
+                               className="btn">Visiter</a>
                         </div>
                     </div>
                     <div className="card">
@@ -72,8 +90,9 @@ const Home = () => {
                                 <img src="/assets/images/logos/mtlk.png" alt="MTLK"/>
                             </div>
                             <h4>MTLK IT</h4>
-                            <p>Site web vitrine présentant les différentes activités de l’entreprise MTLK Informatique.</p>
-                            <a href="https://mtlk.fr" target="_blank" className="btn">Visiter</a>
+                            <p>Site web vitrine présentant les différentes activités de l’entreprise MTLK
+                                Informatique.</p>
+                            <a href="https://mtlk.fr" target="_blank" rel="noreferrer" className="btn">Visiter</a>
                         </div>
                     </div>
                 </div>
@@ -84,21 +103,25 @@ const Home = () => {
                 <form className="containerForm" action="https://formsubmit.co/30b76927fbbcd60b3835eec238923d8f" method="POST">
                     <div className={"containerLabelInput"}>
                         <label htmlFor="mail">Adresse Mail</label>
-                        <input type="mail" name="mail" id="mail" placeholder={"Votre adresse mail..."} required/>
+                        <input type="mail" name="mail" id="mail" value={mail} onChange={handleChange}
+                               placeholder={"Votre adresse mail..."} required/>
                     </div>
                     <div className={"containerLabelInput"}>
                         <label htmlFor="tel">Numéro de Téléphone</label>
-                        <input type="number" name="tel" id="tel" placeholder={"Votre numéro de téléphone..."} required/>
+                        <input type="number" name="tel" id="tel" value={tel} onChange={handleChange}
+                               placeholder={"Votre numéro de téléphone..."} required/>
                     </div>
                     <div className={"containerLabelInput"}>
                         <label htmlFor="object">Objet</label>
-                        <input type="text" name="object" id="object" placeholder={"L'objet de votre demande..."}
+                        <input type="text" name="object" id="object" value={object} onChange={handleChange}
+                               placeholder={"L'objet de votre demande..."}
                                required/>
                     </div>
                     <div className={"containerLabelInput"}>
                         <label htmlFor="description">Description</label>
                         <textarea name="description" id="description"
-                                  placeholder={"Decrivez-nous en quelques lignes votre besoin..."} required/>
+                                  placeholder={"Decrivez-nous en quelques lignes votre besoin..."} value={description}
+                                  onChange={handleChange} required/>
                     </div>
                     <button className={"btn"} type={"submit"}>Envoyer</button>
                 </form>
