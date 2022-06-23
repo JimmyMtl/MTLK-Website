@@ -1,16 +1,10 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCode, faLaptop, faTreeCity} from "@fortawesome/free-solid-svg-icons";
-import axios from "axios"
 import {useState} from "react";
 
 const Home = () => {
     const [states, setStates] = useState({mail: "", tel: "", object: "", description: ""})
     const {mail, tel, object, description} = states;
-    const handleSubmit = async (e) => {
-        // action="https://formsubmit.co/30b76927fbbcd60b3835eec238923d8f" method="POST"
-        e.preventDefault();
-        console.log('submit')
-    }
     const handleChange = (e) => {
         setStates({
             ...states,
@@ -100,7 +94,8 @@ const Home = () => {
             <div className="containerContact" id={"Contact"}>
                 <h2>Nous contacter</h2>
                 <h3>Une question ? Besoin d&apos;un devis ? Contactez-nous !</h3>
-                <form className="containerForm" action="https://formsubmit.co/30b76927fbbcd60b3835eec238923d8f" method="POST">
+                <form className="containerForm" action="https://formsubmit.co/30b76927fbbcd60b3835eec238923d8f"
+                      method="POST">
                     <div className={"containerLabelInput"}>
                         <label htmlFor="mail">Adresse Mail</label>
                         <input type="mail" name="mail" id="mail" value={mail} onChange={handleChange}
