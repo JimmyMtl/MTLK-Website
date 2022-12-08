@@ -11,8 +11,8 @@ const Footer = () => {
                 <p>Assistance informatique, développement logiciels et prévention sur la cybersecurité. Personnalisation
                     des besoins. Interventions sur tout le Grand Nancy.</p>
                 <div className="containerLogos">
-                    <a href="https://www.facebook.com/MTLKInfo/" target={"_blank"}><FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon></a>
-                    <a href="https://www.linkedin.com/company/mtlk/" target={"_blank"}><FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon></a>
+                    <a href="https://www.facebook.com/MTLKInfo/" target={"_blank"} rel={"noreferrer"}><FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon></a>
+                    <a href="https://www.linkedin.com/company/mtlk/" target={"_blank"} rel={"noreferrer"}><FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon></a>
                 </div>
                 <p className={"copyrightFirst"}>Copyright MTLK © 2022 Tous droits réservés</p>
             </div>
@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
             <div className="containerThirdCol">
                 <h4>Contactez-Nous</h4>
-                <a href="https://g.page/MTLK-info?share" target="_blank">
+                <a href="https://g.page/MTLK-info?share" target="_blank" rel={"noreferrer"}>
                     <h5><FontAwesomeIcon icon={faMapMarkerAlt}></FontAwesomeIcon>136 rue de
                         Mon Désert,<br/> 54000 Nancy</h5>
                 </a>
