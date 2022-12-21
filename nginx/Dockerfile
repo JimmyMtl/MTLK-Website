@@ -2,7 +2,7 @@ FROM nginx
 RUN apt-get update && apt-get install -y \
     openssl \
 #    python3-certbot-nginx \
-&& rm -rf /var/lib/lists/* \
+&& rm -rf /var/lib/lists/* 
 
 RUN openssl req -x509 -nodes -newkey rsa:4096 -keyout /etc/ssl/private/nginx-selfsigned.key -out tc/ssl/certs/nginx-selfsigned.crt -days 365 -subj '/CN=mtlk.fr'
 
