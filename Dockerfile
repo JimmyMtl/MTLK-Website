@@ -11,7 +11,7 @@ RUN npm run build --production
 # Install `serve` to run the application
 RUN npm install -g serve
 
-#EXPOSE 5000
+EXPOSE 5000
 
 # Run application
 CMD ["serve","-s","build"]
