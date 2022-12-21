@@ -6,8 +6,8 @@ RUN mkdir node_modules/.cache && chmod -R 777 node_modules/.cache
 COPY . .
 
 # Build for production
-RUN npm run build --production
-RUN ls -la /build
+RUN npm run build --omit=dev
+RUN ls -la ./build
 # Install `serve` to run the application
 RUN npm install -g serve
 
