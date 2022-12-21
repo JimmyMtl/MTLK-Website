@@ -1,6 +1,7 @@
 FROM nginx
 COPY ./defaultProd.conf /etc/nginx/conf.d/default.conf
-RUN apt install snapd
+RUN snap --version
+RUN #apt install snapd
 RUN snap install core
 RUN snap refresh core
 RUN dnf remove certbot
