@@ -4,4 +4,15 @@ COPY ./package.json ./
 RUN npm install
 RUN mkdir node_modules/.cache && chmod -R 777 node_modules/.cache
 COPY . .
-CMD ["npm", "run","start"]
+
+# Build for production
+RUN npm run build --production
+
+# Install `serve` to run the application
+RUN npm install -g serve
+
+#EXPOSE 5000
+
+# Run application
+CMD ["serve","-s","build"]
+#CMD ["npm", "run","start"]
