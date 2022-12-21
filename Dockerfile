@@ -15,5 +15,5 @@ RUN npm install -g serve
 RUN ls -la ./build
 
 # Run application
-#CMD serve -s build
-CMD ["npm", "run","start"]
+RUN npx serve -s build
+#CMD ["npm", "run","start"]
