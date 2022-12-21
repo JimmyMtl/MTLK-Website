@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y \
     python3-certbot-nginx \
 && rm -rf /var/lib/lists/*
 #RUN certbot certonly --nginx -d www.mtlk.fr
-RUN certbot certonly --nginx --non-interactive --agree-tos -d mtlk.fr --debug
+RUN certbot certonly --nginx --non-interactive --agree-tos --email contact@mtlk.fr -d mtlk.fr --debug
 
 FROM nginx
 COPY ./defaultProd.conf /etc/nginx/conf.d/default.conf
