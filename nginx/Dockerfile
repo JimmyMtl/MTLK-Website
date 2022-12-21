@@ -1,4 +1,4 @@
-FROM certbot/certbot as BUILD
+FROM nginx as BUILD
 RUN apt-get update && apt-get install -y \
     python3-certbot-nginx \
 #&& rm -rf /var/lib/lists/*
