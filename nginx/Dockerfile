@@ -1,14 +1,12 @@
-FROM nginx as BUILD
+
+FROM nginx
 RUN apt-get update && apt-get install -y \
     certbot \
     python3-certbot-nginx \
 && rm -rf /var/lib/lists/*
-#RUN certbot certonly --nginx -d www.mtlk.fr
+COPY ./defaultProd.conf /etc/nginx/conf.d/default.conf
 RUN certbot certonly --nginx --non-interactive --agree-tos --email contact@mtlk.fr -d mtlk.fr --debug
 
-FROM nginx
-COPY ./defaultProd.conf /etc/nginx/conf.d/default.conf
-COPY --from=BUILD /etc/letsencrypt /etc/letsencrypt
 #RUN snap --version
 RUN #apt install snapd
 #RUN snap install core
