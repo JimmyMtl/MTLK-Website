@@ -12,8 +12,7 @@ RUN openssl req \
         -subj /CN=mtlk.fr \
         -reqexts SAN \
         -extensions SAN \
-        -config <(cat /System/Library/OpenSSL/openssl.cnf \
-            <(printf '[SAN]\nsubjectAltName=DNS:mtlk.fr')) \
+        -config <(cat /System/Library/OpenSSL/openssl.cnf ; printf '[SAN]\nsubjectAltName=DNS:mtlk.fr') \
         -sha256 \
         -days 3650 \
         -keyout /etc/ssl/private/nginx-selfsigned.key \
