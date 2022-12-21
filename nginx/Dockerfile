@@ -8,7 +8,6 @@ COPY ./defaultProd.conf /etc/nginx/conf.d/default.conf
 RUN certbot certonly --nginx --non-interactive --agree-tos --email contact@mtlk.fr -d mtlk.fr --debug
 
 #RUN snap --version
-RUN #apt install snapd
 #RUN snap install core
 #RUN snap refresh core
 #RUN dnf remove certbot
