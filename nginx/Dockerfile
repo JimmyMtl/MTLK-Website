@@ -1,4 +1,7 @@
-FROM certbot/certbot:latest as BUILD
+FROM nginx as BUILD
+RUN apt-get update && apt-get install -y \
+    certbot \
+&& rm-rf /var/lib/lists/*
 RUN #certbot certonly --nginx -d www.mtlk.fr
 RUN certbot --nginx --non-interactive --agree-tos --email contact@mtlk.fr -d www.mtlk.fr
 
