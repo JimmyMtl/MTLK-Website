@@ -16,4 +16,4 @@ RUN ls -la ./build
 
 # Run application
 #CMD ["npx", "serve", "-s", "build"]
-#CMD ["npm", "run","start"]
+CMD ["npm", "run","start"]
