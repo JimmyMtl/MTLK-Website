@@ -10,7 +10,7 @@ services:
     environment:
       - WDS_SOCKET_PORT=0
     ports:
-      - "5000:5000"
+      - "3000:3000"
   nginx:
     restart: always
     build:
