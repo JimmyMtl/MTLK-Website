@@ -9,8 +9,9 @@ services:
       - ./:/app
     environment:
       - WDS_SOCKET_PORT=0
-#    ports:
-#      - "3000:3000"
+    ports:
+      - "3000:3000"
+      - "40273:40273"
   nginx:
     restart: always
     build:
