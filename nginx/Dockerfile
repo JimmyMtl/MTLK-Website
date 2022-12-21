@@ -1,6 +1,6 @@
 FROM nginx
 COPY ./defaultProd.conf /etc/nginx/conf.d/default.conf
-RUN apt install certbot
+RUN apt-get install certbot
 RUN certbot certonly --sandalone -d www.mtlk.fr
 RUN ls
 RUN #apt-get install openssl;
