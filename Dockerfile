@@ -1,7 +1,7 @@
 FROM node:16-alpine
 WORKDIR /app
-COPY ./package.json ./
-RUN apt install xsel
+COPY ./package.json ./package.json
+RUN cat ./package.json
 RUN npm install
 RUN mkdir node_modules/.cache && chmod -R 777 node_modules/.cache
 COPY . .
@@ -18,5 +18,5 @@ RUN npm run build --omit=dev
 RUN ls -la ./build
 
 # Run application
-CMD ["serve", "-s", "build"]
-#CMD ["npm", "run","start"]
+CMD ["serve", "-s", "./build"]
+#RUN ["npm", "run","start"]
