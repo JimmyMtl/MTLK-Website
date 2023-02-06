@@ -14,13 +14,13 @@ services:
     ports:
       - "3000:3000"
       - "40273:40273"
-#  nginx:
-#    restart: always
-#    build:
-#      dockerfile: Dockerfile
-#      context: './nginx'
-#    ports:
-#      - '80:80'
-#      - '443:443'
-#    depends_on:
-#      - client
+  nginx:
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: './nginx'
+    ports:
+      - '80:80'
+      - '443:443'
+    depends_on:
+      - client
