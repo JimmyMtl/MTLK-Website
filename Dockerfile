@@ -14,8 +14,8 @@ RUN npm install -g serve
 RUN npm run build --omit=dev
 #EXPOSE 3000
 
-RUN ls -la ./build
-COPY ./build ./build
+RUN ls -la
+#COPY ./build ./build
 # Run application
 CMD ["serve", "-s", "build"]
 #RUN ["npm", "run","start"]
