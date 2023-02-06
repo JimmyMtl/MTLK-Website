@@ -1,7 +1,7 @@
 FROM node:16-alpine
 WORKDIR /app
 COPY ./package.json ./package.json
-RUN mkdir node_modules/.cache && chmod -R 777 node_modules/.cache
+RUN mkdir ./node_modules/.cache && chmod -R 777 node_modules/.cache
 RUN npm install
 COPY . .
 
