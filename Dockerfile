@@ -17,5 +17,5 @@ RUN npm run build --omit=dev
 RUN ls -la ./build
 
 # Run application
-CMD ["serve", "-s", "./build"]
+CMD ["serve", "-s", "build"]
 #RUN ["npm", "run","start"]
