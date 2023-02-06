@@ -12,10 +12,10 @@ RUN npm install -g serve
 
 # Build for production
 RUN npm run build --omit=dev
-#EXPOSE 5000
+#EXPOSE 3000
 
 RUN ls -la ./build
-
+COPY ./build ./build
 # Run application
 CMD ["serve", "-s", "build"]
 #RUN ["npm", "run","start"]
