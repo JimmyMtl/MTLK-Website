@@ -9,7 +9,7 @@ RUN npm install -g serve
 
 
 # Build for production
-RUN npm run build --omit=dev
+RUN npm run build
 
 RUN ls -la
 # Run application
