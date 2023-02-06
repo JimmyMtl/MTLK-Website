@@ -301,7 +301,8 @@ a {
 }
 
 .containerLinks .linkBtn {
-    @apply p-0;
+    @apply p-0 transition
+    hover:text-white;
 }
 
 .containerThirdCol h5 {
@@ -314,7 +315,8 @@ a {
 }
 
 .containerThirdCol a {
-    @apply text-gray-400;
+    @apply text-gray-400
+    hover:text-white transition;
 }
 
 .containerMobile {

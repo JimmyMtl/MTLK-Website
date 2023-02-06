@@ -71,7 +71,7 @@ const Home = () => {
                             <div className="containerImage">
                                 <img src="/assets/images/logos/club.png" height={10} alt="Club AtouTalent"/>
                             </div>
-                            <h4>Club AtouTalent</h4>
+                            <h4>Club AtouTalent 2021-2022</h4>
                             <p>Application web facilitant la relation entreprises-étudiants. Création d’un moteur de
                                 recherche sur les formations en Grand Est.</p>
                             <a href="https://clubatoutalent.fr" rel="noreferrer" target="_blank"
