@@ -10,16 +10,17 @@ services:
       - ./:/app
     environment:
       - WDS_SOCKET_PORT=0
+      - NODE_ENV=production
     ports:
       - "3000:3000"
       - "40273:40273"
-  nginx:
-    restart: always
-    build:
-      dockerfile: Dockerfile
-      context: './nginx'
-    ports:
-      - '80:80'
-      - '443:443'
-    depends_on:
-      - client
+#  nginx:
+#    restart: always
+#    build:
+#      dockerfile: Dockerfile
+#      context: './nginx'
+#    ports:
+#      - '80:80'
+#      - '443:443'
+#    depends_on:
+#      - client
