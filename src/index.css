@@ -324,13 +324,14 @@ a {
     @apply md:hidden;
 }
 
-.containerMobile .containerMenu{
+.containerMobile .containerMenu {
     @apply absolute top-12 left-0 right-0;
     @apply overflow-hidden;
     @apply flex flex-col items-center justify-center;
     @apply transition-all duration-500;
     @apply bg-gradient-to-b from-[#001430] to-[#011530]  p-5;
 }
+
 .containerMobile .containerHiddenMenu {
     @apply h-0;
     @apply opacity-0;
@@ -411,3 +412,33 @@ a {
 }
 
 /* #endregion HAMBURGER ANIMATION */
+
+.alertBarContainer {
+    background-color: rgba(255, 0, 0, 0.8);
+    width: 100%;
+    min-height: 150px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    z-index: 999;
+    padding: 1rem;
+}
+
+.alertBarContainer .warningIconContainer {
+    font-size: 5rem;
+    color: white;
+}
+
+.alertBarContainer .warningContainer {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.alertBarContainer .warningContainer p {
+    color: white;
+}
