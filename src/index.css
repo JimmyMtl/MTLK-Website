@@ -127,7 +127,7 @@ a:hover {
 }
 
 .containerFirst .containerImage {
-    @apply w-full md:w-6/12 md:p-16;
+    @apply w-6/12 md:p-16;
 }
 
 .containerFirst .btnHeader {
@@ -172,10 +172,14 @@ a:hover {
 
 
 .containerCards {
-    @apply grid grid-cols-3 md:gap-8 gap-y-16 items-center justify-center;
+    @apply grid md:gap-8 gap-y-16 items-center justify-center;
     @apply my-10;
 }
-
+@media screen and (min-width: 768px) {
+    .containerCards {
+        @apply grid-cols-3;
+    }
+}
 .containerCards svg {
     @apply block;
 }
