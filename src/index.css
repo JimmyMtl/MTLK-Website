@@ -1,24 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
-    @apply m-0 p-0;
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+html {
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji;;
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+
     min-height: 100vh;
     width: 100%;
     background: linear-gradient(#001430, #03164A, #001430, #011530);
 }
 
-html {
-    scroll-behavior: smooth;
 
-}
 
 h1 {
     color: white;
@@ -48,13 +50,22 @@ h4 {
 p {
     @apply text-base;
     @apply text-gray-400;
+    @apply leading-6;
 }
 
 a {
     color: white;
-
+    @apply transition;
 }
-
+a:hover {
+    color: red;
+}
+.containerContactTop{
+    @apply leading-8 text-sm underline underline-offset-4 mt-2;
+}
+.containerContactTop a:last-child{
+    @apply tracking-wide;
+}
 .containerNavbar {
     /*@apply flex flex-wrap items-center;*/
     /*@apply text-white;*/
@@ -120,7 +131,6 @@ a {
 }
 
 .containerFirst .btnHeader {
-    @apply text-xl;
     @apply px-8 !important;
 }
 
@@ -162,7 +172,7 @@ a {
 
 
 .containerCards {
-    @apply flex flex-wrap md:gap-8 gap-y-16 items-center justify-center;
+    @apply grid grid-cols-3 md:gap-8 gap-y-16 items-center justify-center;
     @apply my-10;
 }
 
@@ -172,19 +182,23 @@ a {
 
 .containerCards .card {
     @apply p-5;
-    @apply w-full md:w-4/12 lg:w-3/12;
+    @apply w-full h-full;
     @apply relative;
-    /*@apply bg-green-400;*/
 }
 
 .containerCards .containerImage {
-    @apply w-32;
+    @apply w-28 h-28 m-auto;
 
 }
 
 .containerCards img {
-    width: auto;
-    height: auto;
+    @apply w-full h-full;
+    @apply object-contain;
+    @apply grayscale;
+    @apply transition-all duration-200;
+}
+.containerCards img:hover {
+    @apply filter-none;
 }
 
 .containerCards .card:before {
@@ -213,7 +227,7 @@ a {
 }
 
 .containerCards .btn {
-    @apply block text-center mt-5;
+    @apply block text-center;
 }
 
 .containerContact {

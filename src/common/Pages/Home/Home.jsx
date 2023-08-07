@@ -24,7 +24,11 @@ const Home = () => {
                         clients jusqu&apos;à répondre complètement à leur besoin. Déplacement sur tout le Grand
                         Nancy.</p>
                     <div>
-                        <a className={"btn btnHeader"} href="tel:+33695491398">+33 6 95 49 13 98</a>
+                        <a className={"btn btnHeader"} href="mailto:contact@mtlk.fr">contact@mtlk.fr</a>
+                        <p className={"containerContactTop"}>
+                            <span> ou appelez-nous au </span>
+                            <a className={""} href="tel:+33695491398">+33.6.95.49.13.98</a>
+                        </p>
                     </div>
                 </div>
 
@@ -63,7 +67,7 @@ const Home = () => {
                             <p>Site web vitrine présentant les différentes activités du Hameau de la Savouillane situé à
                                 Buis-les-Baronnies.</p>
                             <a href="https://hameau-de-la-savouillane.com" target="_blank" className="btn"
-                               rel="noreferrer" >Visiter</a>
+                               rel="noreferrer">Visiter</a>
                         </div>
                     </div>
                     <div className="card">
