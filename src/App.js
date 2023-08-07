@@ -7,7 +7,7 @@ import AlertBar from "./common/Components/AlertBar/AlertBar";
 function App() {
     return (
         <Router>
-            <AlertBar/>
+            {/*<AlertBar/>*/}
             <Navbar/>
             <Routes>
                 <Route path={'/'} element={<Home/>}/>
